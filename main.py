@@ -5,11 +5,11 @@ from strategies import strategy_uniform, strategy_mle, strategy_hoeffding, strat
 from utils import hoeffding_margin, plot_estimations, plot_gaussians
 
 """
-:param n_total: Le nombre total d'essais.
-:param n_treatments: Le nombre de traitements.
-:param true_p: Les vraies probabilités de succès pour chaque traitement.
-:param epsilon: Le paramètre d'exploration-exploitation.
-:param strategies: Un dictionnaire contenant les différentes stratégies d'échantillonnage.
+   n_total: Le nombre total d'essais.
+   n_treatments: Le nombre de traitements.
+   true_p: Les vraies probabilités de succès pour chaque traitement.
+   epsilon: Le paramètre d'exploration-exploitation.
+   strategies: Un dictionnaire contenant les différentes stratégies d'échantillonnage.
 
 """
 
@@ -31,9 +31,9 @@ strategies = {
 def save_results_to_csv(s, n, strategy_name):
     """
     Sauvegarde les résultats (succès, essais, probabilité estimée, marge d'erreur) dans un fichier CSV.
-    :param s: Le nombre de succès pour chaque traitement
-    :param n: Le nombre d'essais pour chaque traitement
-    :param strategy_name: Le nom de la stratégie utilisée
+       s: Le nombre de succès pour chaque traitement
+       n: Le nombre d'essais pour chaque traitement
+       strategy_name: Le nom de la stratégie utilisée
     """
     with open(f"results_{strategy_name}.csv", mode='w', newline='') as file:
         writer = csv.writer(file)
